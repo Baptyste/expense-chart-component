@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="link.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="balance">
+      <div class="bal-bis">
+        <span>My balance</span>
+        <div class="amount"></div>
+      </div>
+      <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <circle fill="#382314" cx="48" cy="24" r="24" />
+          <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23" />
+        </g>
+      </svg>
+    </div>
+    <div class="total">
+      <div class="totalbis">
+        <h2>Spending - Last 7 days</h2>
+        <canvas id="barCanvas" aria-label="Chart"></canvas>
+        <div class="separator"></div>
+      </div>
+      <div class="results">
+        <div class="left">
+          <h3>Total this month</h3>
+          <span class="price">$</span>
+        </div>
+        <div class="right">
+          <span class="percent">+2.4%</span>
+          <span>from last month</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

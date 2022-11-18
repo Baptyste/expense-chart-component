@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+
+    /* Color */
+    --Softred: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Darkbrown: hsl(25, 47%, 15%);
+    --Mediumbrown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Verypaleorange: hsl(33, 100%, 98%);
+
+    /* Font Weight */
+    --fw-4: 400;
+    --fw-7: 700;
+}
+
+/* Mobile First */
+
+body,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: min(1280px, 100%);
+    height: 100%;
+}
+
+body {
+    max-height: auto;
+    font-family: "DM SANS";
+    font-size: 18px;
+    background-color: var(--Cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 85%;
+}
+
+.balance {
+    background-color: var(--Softred);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100% auto;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.bal-bis {
+    padding: 20px;
+}
+
+.bal-bis span {
+    color: var(--Verypaleorange);
+}
+
+.amount {
+    color: var(--Verypaleorange);
+    font-weight: var(--fw-7);
+    font-size: 26px;
+}
+
+.balance svg {
+    position: absolute;
+    right: 15px;
+    transform: translateY(50%);
+}
+
+.total {
+    background-color: var(--Verypaleorange);
+    border-radius: 10px;
+}
+
+.totalbis {
+    padding: 20px;
+}
+
+h2 {
+    color: var(--Darkbrown);
+    font-size: 28px;
+    margin-bottom: 55px;
+}
+
+#barCanvas {
+    width: 550px;
+    display: block;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.day {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.mon,
+.tue,
+.wed,
+.thu,
+.fri,
+.sat,
+.sun {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: var(--fw-4);
+    color: var(--Mediumbrown);
+}
+
+span.bar {
+    background-color: var(--Softred);
+    width: 110%;
+    border-radius: 5px;
+}
+
+span.bar:hover {
+    cursor: pointer;
+    background-color: var(--Cyan);
+}
+
+
+.mon .bar {
+    height: 50px;
+}
+
+.tue .bar {
+    height: 110px;
+}
+
+.wed .bar {
+    height: 150px;
+}
+
+.thu .bar {
+    height: 100px;
+}
+
+.fri .bar {
+    height: 80px;
+}
+
+.sat .bar {
+    height: 130px;
+}
+
+.sun .bar {
+    height: 90px;
+}
+
+span.bar:hover {
+    cursor: pointer;
+}
+
+.active {
+    top: 0px;
+    bottom: 0px;
+    transition: 1.5s;
+}
+
+.amount-day {
+    position: absolute;
+    display: none;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    width: 130%;
+    height: 20px;
+    background-color: var(--Darkbrown);
+    color: white;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.amount-day1 {
+    position: absolute;
+    display: none;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    width: 130%;
+    height: 20px;
+    background-color: var(--Darkbrown);
+    color: white;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.separator {
+    height: 2px;
+    width: 100%;
+    background-color: var(--Cream);
+    margin-top: 20px;
+}
+
+.results {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    color: var(--Mediumbrown);
+    font-weight: var(--fw-4);
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: var(--Darkbrown);
+    font-weight: var(--fw-7);
+    font-size: 32px;
+    margin-bottom: 150px;
+}
+
+.left {
+    margin-bottom: 25px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.percent {
+    color: var(--Darkbrown);
+    font-weight: var(--fw-7);
+}
+
+.right span {
+    text-align: right;
+}
+
+.right span:nth-last-of-type(1) {
+    color: var(--Mediumbrown);
+    font-size: 16px;
+}
+
+@media (min-width:368px) {
+    .main {
+        width: 80%;
+    }
+}
+
+@media (min-width:650px) {
+    .main {
+        width: 70%;
+    }
+}
+
+@media (min-width:850px) {
+    .main {
+        width: 40%;
+    }
+}
+
+@media (min-width:1280px) {
+    .main {
+        width: 30%;
+        transform: translateX(35%);
+    }
+}
